@@ -105,18 +105,18 @@ function build(name, input, dst, file, copyFiles, watchInclude) {
         }
       },
       nodeResolve(),
-      terser({
-        ecma: 2020,
-        compress: {
-          module: true,
-          toplevel: true,
-          keep_classnames: true,
-          unsafe_arrows: true,
-          drop_console: false,
-          drop_debugger: false
-        },
-        output: { quote_style: 1 }
-      })
+      // terser({
+      //   ecma: 2020,
+      //   compress: {
+      //     module: true,
+      //     toplevel: true,
+      //     keep_classnames: true,
+      //     unsafe_arrows: true,
+      //     drop_console: false,
+      //     drop_debugger: false
+      //   },
+      //   output: { quote_style: 1 }
+      // })
     ]
   };
 

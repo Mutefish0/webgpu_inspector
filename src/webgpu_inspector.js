@@ -980,10 +980,12 @@ export let webgpuInspector = null;
         // with a layout from pipeline.getBindGroupLayout(#) also need
         // to be re-created. Patch in the replacement BindGroup if there is one.
         let bindGroup = args[1];
-        const objectRef = this._objectReplacementMap.get(bindGroup.__id);
-        if (objectRef) {
-          if (objectRef.replacement) {
-            args[1] = objectRef.replacement;
+        if (bindGroup) {
+          const objectRef = this._objectReplacementMap.get(bindGroup.__id);
+          if (objectRef) {
+            if (objectRef.replacement) {
+              args[1] = objectRef.replacement;
+            }
           }
         }
       }
